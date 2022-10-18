@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+
+	<script>
+		// 求任意数组最大值和最小值
+		let arr1 = [23, 12, 45, 7, 99]
+		let arr2 = [52, 85, 13, 67, 38]
+		function getArrMaxAndMin(arrXc) {
+			let max = arrXc[0]
+			let min = arrXc[0]
+			for (let i = 1; i < arrXc.length; i++) {
+				max = max > arrXc[i] ? max : arrXc[i]
+				min = min < arrXc[i] ? min : arrXc[i]
+			}
+			return [max, min]
+		}
+		let resuleArr1 = getArrMaxAndMin(arr1)
+		let resuleArr2 = getArrMaxAndMin(arr2)
+		document.write(`数组最大值是${resuleArr1[0]}，最小值是${resuleArr1[1]}<br>`)
+		document.write(`数组最大值是${resuleArr2[0]}，最小值是${resuleArr2[1]}<br>`)
+	</script>
+</body>
+
+</html>

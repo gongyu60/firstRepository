@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		// 4.找出数组中，非法的数字并且删除
+		// 第一种方法：
+		let arr = [22, 45, 72, 23, null, 'aa', 09, NaN, 23, 18, undefined, 9, 1, 22, 72, [], 66]
+		for (let i = 0; i < arr.length; i++) {
+			if (typeof arr[i] !== typeof 1 || arr[i] !== arr[i]) {
+				arr.splice(i, 1)
+				i--
+			}
+		}
+		console.log("~ arr", arr)
+
+
+		// 第二种方法：
+		let Arr = [22, 45, 72, 23, null, 'aa', 09, NaN, 23, 18, undefined, 9, 1, 22, 72, [], 66]
+		let newArr = []
+		for (let i = 0; i < Arr.length; i++) {
+			if (typeof Arr[i] === 'number' && Arr[i] === Arr[i]) {
+				newArr.push(Arr[i])
+			}
+		}
+		console.log("~ newArr", newArr)
+	</script>
+</body>
+
+</html>

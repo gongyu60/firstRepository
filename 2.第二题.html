@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+
+	<script>
+		//2.遍历下面的对象将null改成暂无信息，打印在控制台
+
+		function getNull(Object) {
+			for (let key in Object) {
+				if (Object[key] === null) {
+					Object[key] = '暂无信息'
+				}
+			}
+			return Object
+		}
+		let obj = {
+			"PortfolioNo": null,//0 1 “暂无信息”
+			"PortfolioName": null,
+			"ParentPortfolioNo": null,
+			"IsLeaf": false,
+			"BizType": 0,
+			"State": 0,
+			"Tags": null,
+			"Level": 0,
+			"SeqNo": 0,
+			"AssetType": 0,
+			"InvestManager": null,
+			"Abbreviation": null,
+			"AgencyAccoutNo": null,
+			"BondHoldInfo": null,
+			"Properties": null
+		}
+		getNull(obj)
+		console.log(getNull(obj))
+	</script>
+</body>
+
+</html>

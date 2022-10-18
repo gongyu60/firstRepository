@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<script src="./baseTool.js"></script>
+	<script>
+		//扩展题：写一个抽奖函数，在组内，抽出一二三等奖（不可以重复）第一个随机数就是一等奖，依次类推
+		let arr = ['赵云', '黄忠', '关羽', '张飞', '马超', '刘备', '曹操']
+
+		for (let i = 1; i <= 3; i++) {
+			let a = getArrRandom(arr.length)
+			document.write(`${i}等奖获得者是${arr[a]}<br>`)
+			arr.splice(a, 1)
+		}
+
+	</script>
+</body>
+
+</html>

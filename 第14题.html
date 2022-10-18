@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+
+	<script>
+		/* 14. 实现数组里求最大值的函数 */
+		let arr1 = [4, 9, 5, 3, 20, 6, 15, 11]
+		let arr2 = [23, 56, 34, 1, 23, 74, 15, 11]
+		function getMax(arrayNums) {
+			for (let i = 0; i < arrayNums.length; i++) {
+				for (let j = 1; j < arrayNums.length; j++) {
+					if (arrayNums[i] > arrayNums[j]) {
+						arrayNums.splice(j, 1)
+						j--
+					} else if (arrayNums[i] < arrayNums[j]) {
+						arrayNums.splice(i, 1)
+						i--
+					}
+				}
+			}
+			return arrayNums
+		}
+		let result1 = getMax(arr1)
+		console.log("~ arr1", arr1)
+		let result2 = getMax(arr2)
+		console.log("~ arr2", arr2)
+	</script>
+</body>
+
+</html>

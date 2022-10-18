@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+
+	<script>
+		//1.写一个给数组去重的方法，并返回去重后的数组
+
+		function getNew(Arr) {
+			for (let i = 0; i < Arr.length; i++) {
+				for (let j = i + 1; j < Arr.length; j++) {
+					if (Arr[i] === Arr[j]) {
+						Arr.splice(j, 1)
+						j--
+					}
+				}
+			}
+			return Arr
+		}
+		let arr1 = [22, 45, 72, 23, 09, 23, 18, 9, 1, 22, 72, 5, 3, 9, 9]
+		getNew(arr1)
+		console.log(getNew(arr1))
+		let arr2 = [20, 14, 56, 1, 56, 20, 76, 65, 56, 15, 11, 20, 76, 33]
+		getNew(arr2)
+		console.log(getNew(arr2))
+
+	</script>
+</body>
+
+</html>

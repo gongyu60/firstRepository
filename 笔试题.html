@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>js基础-笔试题</title>
+</head>
+
+<body>
+	<script>
+		//   1. 声明age变量并赋值为18
+		let age1 = 18
+		//   2. 声明uname, age, gender 多个变量
+		let uname = 'gongyu'
+		let age2 = 22
+		let gender = '男'
+		//   3. 定义数组，保存 小黑、小红、小花 三个人的名字
+		let arr = ['小黑', '小红', '小花']
+		//   4. 写出for循环遍历数组的基本语法
+		for (let i = 0; i < arr.length; i++) {
+			console.log(arr[i])
+		}
+		//   5. 写出数字自增的做法有哪些
+		for (let i = 0; i < 10; i++) {
+			console.log(i)
+		}
+		//   6. 写出if单分支、双分支、多分支语句
+		if (true) {
+			console.log('萌新')
+		}
+
+		if (false) {
+			console.log('萌新')
+		} else {
+			console.log('大佬')
+		}
+		let num
+		if (num === 1) {
+			console.log(1)
+		} else if (num === 2) {
+			console.log(2)
+		} else if (num === 3) {
+			console.log(3)
+		}
+		//   7. 请写出三元运算符的语法
+		let num1 = 1
+		let num2 = 2
+		num1 < num2 ? console.log(1) : console.log(2)
+		//   8. 请写出for循环的语法
+		for (let i = 0; i < 3; i++) {
+			console.log('循环')
+		}
+		//   9. 写出出数组的常用方法和对应的作用
+		let array = [1, 2, 3, 4, 5]
+		for (let i = 0; i < array.length; i++) {
+			console.log(array[i])
+		}
+		console.log('遍历数组')
+		//   10. 写出函数的语法
+		//         带有形参和返回值
+		function name() {
+			return '返回值'
+		}
+		console.log(name())
+		//   11. 写出作用域有哪些
+		console.log('全局作用域、函数（局部）作用域、块级作用域')
+		//   12. 写出对象语法
+		let stuents = {
+			uname: 'John',
+			age: 18,
+			sex: '男'
+		}
+		//   13. 写出遍历对象的语法
+		for (const key in stuents) {
+			if (Object.hasOwnProperty.call(stuents, key)) {
+				const element = stuents[key];
+				console.log(stuents[key])
+			}
+		}
+		//   14. 写出基本数据类型有哪5种
+		console.log('字符串类型，数字类型，布尔类型，null，undefined')
+		//   15. 写出 转换为数值型，字符串类型的方法
+		// JavaScript字符串类型转为数字类型有四种方式
+		let str = "123"
+		// 方式一：使用前置加号：
+		console.log(+str)         // 输出：123
+		console.log(typeof (+str)) // 输出：number
+
+		// 方式二：使用parseInt()函数：
+		console.log(parseInt(str))         // 输出：123
+		console.log(typeof (parseInt(str))) // 输出：number
+
+		// 方式三：使用parseInt()函数：
+		console.log(parseFloat(str))        // 输出：123
+		console.log(typeof (parseFloat(str))) // 输出：number
+
+		// 方式四：使用Number()函数：
+		console.log(Number(str))         // 输出：123
+		console.log(typeof (Number(str))) // 输出：number
+
+		// JavaScript数字类型转为字符串类型有三种方式
+		var number = 123
+		// 方式一：连接空字符串
+		console.log(number + "");         // 输出："123"
+		console.log(typeof (number + "")); // 输出：string
+
+		// 方式二：使用toString()
+		console.log(number.toString());         // 输出："123"
+		console.log(typeof (number.toString())); // 输出：string
+
+		// 方式三：使用String()
+		console.log(String(number));         // 输出："123"
+		console.log(typeof (String(number))); // 输出：string
+		//   16. 写出模板字符串使用方式
+		let Num = 100
+		console.log(`我丢了${Num}元`)
+		//   17. 写出布尔类型的值为false 的值哪些
+		console.log(`0,'',null,false,undefined,NaN`)
+		//   18. 写出  +加号的功能有哪些
+		console.log('数字字符串转数值，求和，复合赋值运算符，连接字符串，自增运算符')
+	</script>
+</body>
+
+</html>

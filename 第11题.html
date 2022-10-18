@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		/* 11. 计算m - n之间所有数的和
+				需要有函数的使用 */
+
+		let Min = +prompt('输入最小数字')
+		let Max = +prompt('输入最大数字')
+		let sum = 0
+		function getMaxAndMin(max, min) {
+			for (let i = min; i <= max; i++) {
+				sum += i
+			}
+			return `${min}到${max}之间所有的数的和是${sum}`
+		}
+		let result = getMaxAndMin(Max, Min)
+		document.write(result)
+	</script>
+</body>
+
+</html>

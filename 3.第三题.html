@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+
+	<script>
+		//3.封装一个函数，可以检查数据类型并且返回,如果没有传参，'提示请传入参数'，用switch（isType() //不可以传入undefined）
+		function getType(value) {
+			let type = typeof value
+			if (type !== 'object') {
+				return type;
+			}
+			return Object.prototype.toString.call(value).replace(/^\[object (\S+)\]$/, '$1')
+		}
+		let a = getType(Math.PI)
+		console.log(a)
+	</script>
+</body>
+
+</html>

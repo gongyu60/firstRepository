@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		//4.遍历下列对象渲染到页面。需要注意是isShow这个属性如果为false，就不展示，且不会计入总价.总数量
+		let data = [
+			{ name: '小明', age: 18, gender: '男', address: '河北省', isShow: true, goods: "手机", num: "3", price: "1999" },
+			{ name: '小红', age: 19, gender: '女', address: '河南省', isShow: false, goods: "口红", num: "3", price: "188" },
+			{ name: '小刚', age: 17, gender: '男', address: '山西省', isShow: true, goods: "篮球", num: "1", price: "288" },
+			{ name: '小丽', age: 18, gender: '女', address: '山东省', isShow: true, goods: "包包", num: "2", price: "788" },
+			{ name: '晓强', age: 16, gender: '女', address: '蓝翔技校', isShow: true, goods: "羽毛球", num: "1", price: "78" }
+		]
+		for (let i = 0; i < data.length; i++) {
+			if (data[i].isShow === true) {
+				for (let key in data[i]) {
+					document.write(data[i][key])
+				}
+				document.write('<br>')
+			}
+		}
+
+	</script>
+</body>
+
+</html>
